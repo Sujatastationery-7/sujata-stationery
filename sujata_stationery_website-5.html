@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SUJATA STATIONERY — school, office and art supplies at great prices.">
+<title>SUJATA STATIONERY | School • Office • Art</title>
+<style>
+:root{--ink:#111;--paper:#f8f5ed;--gold:#c8a45c;--blue:#173b57;--muted:#777;--line:#ddd8ce}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+h1,h2,h3,.logo{font-family:Georgia,serif;font-weight:500}a{text-decoration:none;color:inherit}
+.top{background:var(--blue);color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:1px}
+header{position:sticky;top:0;z-index:20;background:rgba(248,245,237,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1200px;margin:auto;padding:17px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:21px;letter-spacing:2px}.logo span{color:var(--gold)}
+.links{display:flex;gap:23px;text-transform:uppercase;font-size:11px;letter-spacing:1px}.links a:hover{color:var(--gold)}
+.icons{display:flex;gap:12px}.icons button{border:0;background:none;font-size:18px;cursor:pointer}
+.hero{max-width:1200px;margin:auto;min-height:560px;padding:70px 24px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(17,17,17,.95) 0%,rgba(17,17,17,.72) 48%,rgba(17,17,17,.18)),url('https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff}
+.hero-inner{max-width:650px}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#d9bd78;margin-bottom:15px}.hero h1{font-size:clamp(44px,7vw,76px);line-height:1.03;margin-bottom:18px}.hero p{color:#ddd;max-width:520px;margin-bottom:26px}
+.btn{display:inline-block;padding:13px 20px;border:1px solid #c9aa6a;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;margin:4px;transition:.25s}.btn.primary{background:#d0b36e;color:#111}.btn:hover{transform:translateY(-2px);background:#fff;color:#111}
+section{max-width:1200px;margin:auto;padding:80px 24px}.center{text-align:center}.title{font-size:38px;margin-bottom:8px}.sub{color:var(--muted);font-size:14px;margin-bottom:35px}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.cat{background:#fff;border:1px solid var(--line);padding:28px 10px;text-align:center;transition:.25s}.cat:hover{transform:translateY(-4px);box-shadow:0 10px 25px #00000010}.cat .emoji{font-size:30px;margin-bottom:9px}.cat b{font-size:13px}.cat small{display:block;color:#888;margin-top:3px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product{position:relative;background:#fff;border:1px solid var(--line);overflow:hidden}.product img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:.45s}.product:hover img{transform:scale(1.04)}.tag{position:absolute;left:10px;top:10px;background:var(--blue);color:#fff;padding:5px 8px;font-size:9px;letter-spacing:1px}.heart{position:absolute;right:10px;top:10px;border:0;border-radius:50%;width:32px;height:32px;background:#fff;cursor:pointer}.pbody{padding:14px}.pbody h3{font-size:17px}.material{color:#888;text-transform:uppercase;font-size:10px;letter-spacing:1px}.price{font-weight:bold;margin-top:4px}.add{width:100%;border:1px solid var(--ink);background:var(--ink);color:#fff;padding:10px;margin-top:11px;cursor:pointer}
+.banner{max-width:none;background:var(--blue);color:#fff;text-align:center;padding:65px 24px}.banner h2{font-size:44px}.banner p{color:#d7dde1;margin:8px 0 20px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature{background:#fff;border:1px solid var(--line);padding:24px;text-align:center}.feature strong{display:block;font-family:Georgia,serif;font-size:17px;margin-bottom:6px}.feature span{font-size:12px;color:#777}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:25px}.box{background:#fff;border:1px solid var(--line);padding:30px}.box h3{font-size:25px;margin-bottom:12px}.box p,.box li{color:#777;font-size:13px;margin:7px 0}.box ul{list-style:none}
+footer{background:#111;color:#fff;padding:50px 24px}.foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}.foot p,.foot a{color:#999;font-size:13px}.foot a{display:block;margin:8px 0}.copyright{text-align:center;color:#666;font-size:11px;margin-top:35px;border-top:1px solid #292929;padding-top:22px}
+.toast{position:fixed;right:20px;bottom:20px;background:#111;color:#fff;padding:12px 17px;transform:translateY(100px);transition:.3s;z-index:50;font-size:13px}.toast.show{transform:translateY(0)}
+@media(max-width:850px){.links{display:none}.categories{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.nav{padding:14px}.logo{font-size:17px}.hero{min-height:520px}.categories{grid-template-columns:repeat(2,1fr)}.products{gap:9px}.pbody{padding:11px}.pbody h3{font-size:14px}.features{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.banner h2{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="top">📚 SCHOOL • OFFICE • ART SUPPLIES | GREAT PRODUCTS, GREAT PRICES</div>
+<header><nav class="nav">
+<a class="logo" href="#">SUJATA <span>STATIONERY</span></a>
+<div class="links"><a href="#categories">Categories</a><a href="#products">Products</a><a href="#offers">Offers</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="icons"><button onclick="toast('Search feature ready')">⌕</button><button onclick="toast('Wishlist updated')">♡</button><button onclick="toast('Your cart is ready')">🛒</button></div>
+</nav></header>
+
+<main>
+<div class="hero"><div class="hero-inner"><div class="eyebrow">Your Everyday Stationery Store</div><h1>Everything You Need to Write, Create & Learn.</h1><p>Quality stationery for students, professionals, artists and everyday life — all in one place.</p><a class="btn primary" href="#products">Shop Products</a><a class="btn" href="#categories">Browse Categories</a></div></div>
+
+<section id="categories"><div class="center"><div class="eyebrow">Shop by category</div><h2 class="title">Find What You Need</h2><p class="sub">From your first notebook to your next big project.</p></div>
+<div class="categories">
+<a class="cat" href="#products"><div class="emoji">📓</div><b>Notebooks</b><small>Journals & diaries</small></a>
+<a class="cat" href="#products"><div class="emoji">🖊️</div><b>Pens</b><small>Writing essentials</small></a>
+<a class="cat" href="#products"><div class="emoji">🎨</div><b>Art Supplies</b><small>Draw & create</small></a>
+<a class="cat" href="#products"><div class="emoji">📁</div><b>Office</b><small>Files & folders</small></a>
+<a class="cat" href="#products"><div class="emoji">🎒</div><b>School</b><small>Student essentials</small></a>
+<a class="cat" href="#products"><div class="emoji">🖨️</div><b>Printing</b><small>Everyday services</small></a>
+</div></section>
+
+<section id="products"><div class="center"><div class="eyebrow">Customer favourites</div><h2 class="title">Best Sellers</h2><p class="sub">Popular picks for school, office and creative work.</p></div>
+<div class="products">
+<div class="product"><span class="tag">BESTSELLER</span><button class="heart" onclick="toast('Added to wishlist')">♡</button><img src="https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?auto=format&fit=crop&w=800&q=85"><div class="pbody"><h3>Premium Kraft Notebook</h3><div class="material">A5 • 160 Pages</div><div class="price">₹199</div><button class="add" onclick="toast('Notebook added to cart')">ADD TO CART</button></div></div>
+<div class="product"><span class="tag">POPULAR</span><button class="heart" onclick="toast('Added to wishlist')">♡</button><img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=85"><div class="pbody"><h3>Signature Gel Pen Set</h3><div class="material">Pack of 5</div><div class="price">₹149</div><button class="add" onclick="toast('Pen set added to cart')">ADD TO CART</button></div></div>
+<div class="product"><span class="tag">NEW</span><button class="heart" onclick="toast('Added to wishlist')">♡</button><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=85"><div class="pbody"><h3>Artist Colour Set</h3><div class="material">24 Shades</div><div class="price">₹299</div><button class="add" onclick="toast('Colour set added to cart')">ADD TO CART</button></div></div>
+<div class="product"><span class="tag">VALUE</span><button class="heart" onclick="toast('Added to wishlist')">♡</button><img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=85"><div class="pbody"><h3>Office File Pack</h3><div class="material">Pack of 10</div><div class="price">₹249</div><button class="add" onclick="toast('File pack added to cart')">ADD TO CART</button></div></div>
+</div></section>
+
+<div class="banner" id="offers"><div class="eyebrow">Back to school</div><h2>Stock Up & Save</h2><p>Special prices on selected school and office essentials.</p><a class="btn primary" href="#products">SHOP OFFERS</a></div>
+
+<section id="about"><div class="center"><div class="eyebrow">The Sujata promise</div><h2 class="title">Why Shop With Us?</h2></div><div class="features">
+<div class="feature"><strong>✦ Quality Products</strong><span>Carefully selected everyday essentials.</span></div>
+<div class="feature"><strong>✦ Great Prices</strong><span>Value for students, families and businesses.</span></div>
+<div class="feature"><strong>✦ Local & Reliable</strong><span>A stationery store you can count on.</span></div>
+<div class="feature"><strong>✦ Friendly Service</strong><span>Help choosing the right product.</span></div>
+</div></section>
+
+<section id="contact"><div class="contact"><div class="box"><div class="eyebrow">Visit us</div><h3>SUJATA STATIONERY</h3><p>Your local destination for school, office, art and everyday stationery.</p><ul><li>📍 Basudevpur, West Bengal, India</li><li>📞 +91 XXXXX XXXXX</li><li>🕘 Mon–Sat: 9:00 AM – 8:00 PM</li></ul><a class="btn" href="#">GET DIRECTIONS</a></div><div class="box"><div class="eyebrow">Bulk orders</div><h3>Need stationery for your business or school?</h3><p>Ask about bulk quantities, office supplies and recurring orders.</p><a class="btn primary" href="https://wa.me/910000000000" onclick="event.preventDefault();toast('Add your WhatsApp number to activate this button')">WHATSAPP US</a></div></div></section>
+</main>
+
+<footer><div class="foot"><div><a class="logo" href="#">SUJATA <span>STATIONERY</span></a><p style="margin-top:12px">Write. Learn. Create. Everything you need, under one roof.</p></div><div><b>Shop</b><a href="#products">Notebooks</a><a href="#products">Pens</a><a href="#products">Art Supplies</a><a href="#products">Office</a></div><div><b>Services</b><a href="#">Printing</a><a href="#">Photocopy</a><a href="#">Lamination</a><a href="#">Bulk Orders</a></div><div><b>Support</b><a href="#contact">Contact</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQ</a></div></div><div class="copyright">© 2026 SUJATA STATIONERY. All rights reserved.</div></footer>
+<div class="toast" id="toast"></div>
+<script>let timer;function toast(m){let e=document.getElementById('toast');e.textContent=m;e.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>e.classList.remove('show'),2200)}</script>
+</body></html>
